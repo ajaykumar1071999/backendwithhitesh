@@ -1,0 +1,46 @@
+{
+  "name": "node-practice",
+  "version": "1.0.0",
+  "description": "this is practice project of node with mongoDB",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": "20.14.0"
+  },
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "prepare": "husky",
+    "format": "prettier --write .",
+    "lint": "eslint . ",
+    "lint:fix": "eslint . --fix "
+  },
+  "author": "Ajay Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cloudinary": "^2.6.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-simple": "^0.5.6",
+    "mongoose": "^8.13.0",
+    "multer": "^1.4.5-lts.2",
+    "node-practice": "file:",
+    "nodemailer": "^6.10.0",
+    "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "eslint": "^8.57.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.6.0",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "prettier": "3.5.3"
+  }
+}
