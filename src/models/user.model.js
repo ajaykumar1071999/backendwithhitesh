@@ -1,6 +1,8 @@
 import mongoose from 'mongoose';
 
-const userSchema = new mongoose.Schema(
+const { Schema } = mongoose;
+
+const userSchema = new Schema(
   {
     username: {
       type: String,
@@ -29,9 +31,10 @@ const userSchema = new mongoose.Schema(
     coverImage: {
       type: String,
     },
-    watchHistoey: [
+    watchHistory: [
+      // ✅ corrected field name
       {
-        type: SchemaType.Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref: 'Video',
       },
     ],

@@ -12,19 +12,20 @@ const uploadToCloudinary = async (localFileaPath) => {
   try {
     if (!localFileaPath) return null;
     const uploadResult = await cloudinary.uploader
-      .upload(localFileaPath.path, {
+      .upload(localFileaPath, {
         folder: 'user_avtar',
         use_filename: true,
         resource_type: 'auto',
       })
       .catch((error) => {
-        console.log(error);
+        fs.unlinkSync(localFileaPath);
+        console.log('cloudinary Error', error);
       });
 
-    fs.unlinkSync(localFileaPath.path);
+    fs.unlinkSync(localFileaPath);
     return uploadResult;
   } catch (error) {
-    fs.unlinkSync(localFileaPath.path);
+    fs.unlinkSync(localFileaPath);
     console.log('error from catch', error);
     return null;
   }
